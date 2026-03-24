@@ -2,48 +2,140 @@ import { Briefcase, Wrench, Handshake } from "lucide-react";
 
 const features = [
   {
-    icon: <Briefcase className="w-8 h-8 text-black" />,
+    icon: <Briefcase className="w-5 h-5" />,
+    label: "01",
     title: "Informasi Lowongan Pekerjaan",
-    description: "Menyediakan informasi lowongan pekerjaan bagi individu yang ingin menemukan peluang kerja sesuai dengan keterampilan dan minat mereka."
+    description:
+      "Menyediakan informasi lowongan pekerjaan bagi individu yang ingin menemukan peluang kerja sesuai dengan keterampilan dan minat mereka.",
   },
   {
-    icon: <Wrench className="w-8 h-8 text-black" />,
+    icon: <Wrench className="w-5 h-5" />,
+    label: "02",
     title: "Layanan Jasa Profesional",
-    description: "Menyediakan berbagai layanan seperti pemasaran produk, desain grafis, hingga pengembangan website untuk mendukung kebutuhan bisnis digital."
+    description:
+      "Menyediakan berbagai layanan seperti pemasaran produk, desain grafis, hingga pengembangan website untuk mendukung kebutuhan bisnis digital.",
   },
   {
-    icon: <Handshake className="w-8 h-8 text-black" />,
+    icon: <Handshake className="w-5 h-5" />,
+    label: "03",
     title: "Kolaborasi Profesional",
-    description: "Menghubungkan klien dengan penyedia jasa kreatif dan profesional untuk mempermudah proses kerja sama dalam berbagai kebutuhan layanan digital."
-  }
+    description:
+      "Menghubungkan klien dengan penyedia jasa kreatif dan profesional untuk mempermudah proses kerja sama dalam berbagai kebutuhan layanan digital.",
+  },
 ];
 
 export default function About() {
   return (
-    <section className="bg-[#f2f0ea] py-20 px-6 md:px-12 lg:px-24 text-black">
-      <div className="max-w-7xl mx-auto">
-        {/* Header Section */}
-        <div className="mb-16">
-          <p className="text-lg font-medium mb-4">Apa itu LokaKarya?</p>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#e6a020] leading-tight max-w-4xl">
-            Perancangan Platform Website LokaKarya sebagai Media Penyedia Layanan Jasa Kreatif dan Informasi Lowongan Pekerjaan bagi UMKM dan Masyarakat
-          </h2>
+    <section className="relative bg-[#f5f2eb] py-20 sm:py-28 px-5 sm:px-8 md:px-12 lg:px-20 overflow-hidden">
+
+      {/* Subtle background texture */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-[0.018]"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
+          backgroundRepeat: "repeat",
+          backgroundSize: "128px",
+        }}
+      />
+
+      {/* Warm glow accent */}
+      <div className="absolute -top-20 -right-20 w-[400px] h-[400px] rounded-full bg-[#e6a020] opacity-[0.06] blur-[100px] pointer-events-none" />
+
+      <div className="relative max-w-6xl mx-auto">
+
+        {/* ── Header ── */}
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-16 sm:mb-20">
+          <div className="max-w-xl">
+            {/* Eyebrow */}
+            <div className="inline-flex items-center gap-2 mb-5">
+              <span className="w-5 h-[1.5px] bg-[#e6a020]" />
+              <span className="text-xs font-semibold tracking-[0.18em] uppercase text-[#e6a020]">
+                Apa itu LokaKarya?
+              </span>
+            </div>
+
+            <h2 className="text-[clamp(1.5rem,3.5vw,2.25rem)] font-bold text-[#1a1a1a] leading-[1.25] tracking-tight">
+              Platform Jasa Kreatif &{" "}
+              <span
+                style={{
+                  background: "linear-gradient(90deg, #e6a020 0%, #d4911a 100%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                }}
+              >
+                Peluang Kerja
+              </span>{" "}
+              untuk UMKM & Masyarakat
+            </h2>
+          </div>
+
+          {/* Divider visible only on desktop */}
+          <p className="hidden sm:block text-sm text-[#1a1a1a]/40 max-w-[200px] text-right leading-relaxed">
+            Menghubungkan talenta dengan peluang yang tepat.
+          </p>
         </div>
 
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        {/* ── Divider Line ── */}
+        <div className="w-full h-px bg-[#1a1a1a]/10 mb-10 sm:mb-14" />
+
+        {/* ── Features Grid ── */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-px bg-[#1a1a1a]/10 rounded-2xl overflow-hidden">
           {features.map((item, index) => (
-            <div key={index} className="flex flex-col gap-4">
-              <div className="bg-white w-16 h-16 rounded-xl flex items-center justify-center shadow-sm">
+            <div
+              key={index}
+              className="group relative flex flex-col bg-[#f5f2eb] hover:bg-[#eee9de] transition-colors duration-200 p-7 sm:p-8 gap-5"
+            >
+              {/* Number label */}
+              <span className="text-[11px] font-bold tracking-[0.2em] text-[#1a1a1a]/25 uppercase">
+                {item.label}
+              </span>
+
+              {/* Icon */}
+              <div
+                className="w-11 h-11 rounded-xl flex items-center justify-center text-white shrink-0 transition-transform duration-200 group-hover:-translate-y-0.5"
+                style={{
+                  background: "linear-gradient(135deg, #e6a020 0%, #c98a18 100%)",
+                  boxShadow: "0 4px 16px rgba(230,160,32,0.25)",
+                }}
+              >
                 {item.icon}
               </div>
-              <h3 className="text-xl font-bold mt-2">{item.title}</h3>
-              <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-                {item.description}
-              </p>
+
+              {/* Text */}
+              <div className="flex flex-col gap-2">
+                <h3 className="text-base font-bold text-[#1a1a1a] leading-snug">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-[#1a1a1a]/55 leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+
+              {/* Hover accent line */}
+              <div
+                className="absolute bottom-0 left-7 right-7 h-[2px] rounded-full bg-[#e6a020] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"
+              />
             </div>
           ))}
         </div>
+
+        {/* ── Bottom Stats Strip ── */}
+        <div className="mt-10 sm:mt-14 grid grid-cols-3 gap-4 sm:gap-8">
+          {[
+            { value: "2.4K+", label: "Kreator Aktif" },
+            { value: "500+", label: "Proyek Selesai" },
+            { value: "98%", label: "Kepuasan Klien" },
+          ].map((stat, i) => (
+            <div key={i} className="flex flex-col items-center sm:items-start gap-1">
+              <span className="text-xl sm:text-2xl font-bold text-[#1a1a1a] tracking-tight">
+                {stat.value}
+              </span>
+              <span className="text-xs text-[#1a1a1a]/45 font-medium">{stat.label}</span>
+            </div>
+          ))}
+        </div>
+
       </div>
     </section>
   );

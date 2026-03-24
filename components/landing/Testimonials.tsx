@@ -1,58 +1,196 @@
-import { Star, MessageSquareText } from "lucide-react";
+import { Star, MessageSquareText, Quote } from "lucide-react";
 
-const testimonials = Array(6).fill({
-  name: "Rd Airlangga Dewanata",
-  role: "Pelaku UMKM",
-  rating: 5.0,
-  content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-});
+const testimonials = [
+  {
+    name: "Rd Airlangga Dewanata",
+    role: "Pelaku UMKM",
+    type: "Klien",
+    rating: 5.0,
+    content: "LokaKarya benar-benar membantu bisnis saya. Saya menemukan desainer grafis yang tepat dalam hitungan hari, dan hasilnya melebihi ekspektasi.",
+    initials: "RA",
+    accent: "#e6a020",
+  },
+  {
+    name: "Siti Rahayu Pratiwi",
+    role: "Freelance Designer",
+    type: "Kreator",
+    rating: 5.0,
+    content: "Sebagai kreator, platform ini memberi saya banyak peluang proyek yang sesuai skill. Prosesnya mudah dan kliennya profesional.",
+    initials: "SR",
+    accent: "#7c6df0",
+  },
+  {
+    name: "Budi Santoso",
+    role: "Pemilik Toko Online",
+    type: "Klien",
+    rating: 4.0,
+    content: "Fitur kolaborasi proyeknya sangat membantu. Komunikasi dengan freelancer jadi lebih terstruktur dan transparan.",
+    initials: "BS",
+    accent: "#4ab3f4",
+  },
+  {
+    name: "Ayu Maharani",
+    role: "Content Writer",
+    type: "Kreator",
+    rating: 5.0,
+    content: "Saya sudah 3 bulan aktif di LokaKarya dan sudah menyelesaikan 12 proyek. Platform terbaik untuk freelancer kreatif Indonesia.",
+    initials: "AM",
+    accent: "#f06090",
+  },
+  {
+    name: "Dimas Prasetyo",
+    role: "Startup Founder",
+    type: "Klien",
+    rating: 5.0,
+    content: "Menemukan developer web yang solid itu susah, tapi di LokaKarya proses verifikasinya membuat saya lebih percaya diri memilih.",
+    initials: "DP",
+    accent: "#e6a020",
+  },
+  {
+    name: "Nurul Hidayah",
+    role: "Fotografer Profesional",
+    type: "Kreator",
+    rating: 4.0,
+    content: "Platform yang sangat mendukung kreator lokal. Saya bisa menampilkan portofolio dan langsung terhubung dengan klien potensial.",
+    initials: "NH",
+    accent: "#4ab3f4",
+  },
+];
+
+function StarRating({ rating }: { rating: number }) {
+  return (
+    <div className="flex items-center gap-0.5">
+      {[1, 2, 3, 4, 5].map((i) => (
+        <Star
+          key={i}
+          className="w-3.5 h-3.5"
+          style={{
+            fill: i <= rating ? "#e6a020" : "transparent",
+            color: i <= rating ? "#e6a020" : "#1a1a1a30",
+          }}
+        />
+      ))}
+    </div>
+  );
+}
 
 export default function Testimonials() {
   return (
-    <section className="bg-[#f2f0ea] py-20 px-6 md:px-12 lg:px-24 text-black">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="mb-12">
-          <p className="text-lg font-bold">Apa kata mereka?</p>
-          <h2 className="text-2xl md:text-3xl font-bold text-[#e6a020]">
-            Testimoni Pengguna & Kreator
-          </h2>
+    <section className="relative bg-[#f5f2eb] py-20 sm:py-28 px-5 sm:px-8 md:px-12 lg:px-20 overflow-hidden">
+
+      {/* Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-[#e6a020] opacity-[0.04] blur-[100px] pointer-events-none rounded-full" />
+
+      <div className="relative max-w-6xl mx-auto">
+
+        {/* ── Header ── */}
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10 sm:mb-14">
+          <div>
+            <div className="inline-flex items-center gap-2 mb-4">
+              <span className="w-5 h-[1.5px] bg-[#e6a020]" />
+              <span className="text-xs font-semibold tracking-[0.18em] uppercase text-[#e6a020]">
+                Apa kata mereka?
+              </span>
+            </div>
+            <h2 className="text-[clamp(1.5rem,3.5vw,2.25rem)] font-bold text-[#1a1a1a] tracking-tight leading-snug">
+              Testimoni{" "}
+              <span
+                style={{
+                  background: "linear-gradient(90deg, #e6a020 0%, #c98a18 100%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                }}
+              >
+                Pengguna & Kreator
+              </span>
+            </h2>
+          </div>
+
+          {/* CTA desktop */}
+          <button className="hidden sm:inline-flex items-center gap-2 text-sm font-semibold text-[#1a1a1a]/50 hover:text-[#e6a020] transition-colors group">
+            <MessageSquareText className="w-4 h-4" />
+            Tulis Ulasan Anda
+          </button>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* ── Grid ── */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
           {testimonials.map((item, index) => (
-            <div key={index} className="bg-[#eceae4] p-8 rounded-2xl flex flex-col gap-6">
-              {/* Profile Header */}
-              <div className="flex items-center gap-4">
-                <div className="w-14 h-14 bg-[#d9d9d9] rounded-full shrink-0" />
-                <div className="flex flex-col">
-                  <h3 className="font-bold text-base">{item.name}</h3>
-                  <p className="text-sm text-gray-600 mb-1">{item.role}</p>
-                  <div className="flex items-center gap-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-[#e6a020] text-[#e6a020]" />
-                    ))}
-                    <span className="text-sm font-bold ml-1">{item.rating.toFixed(1)}</span>
-                  </div>
+            <div
+              key={index}
+              className="group relative flex flex-col gap-5 rounded-2xl p-6 sm:p-7 border border-[#1a1a1a]/07 hover:border-[#1a1a1a]/12 transition-colors duration-200"
+              style={{ background: "rgba(255,255,255,0.5)" }}
+            >
+              {/* Quote icon */}
+              <Quote
+                className="absolute top-5 right-6 w-8 h-8 opacity-[0.06]"
+                style={{ color: item.accent }}
+              />
+
+              {/* Profile */}
+              <div className="flex items-center gap-3">
+                {/* Avatar */}
+                <div
+                  className="w-11 h-11 rounded-full flex items-center justify-center text-white text-sm font-bold shrink-0"
+                  style={{
+                    background: `linear-gradient(135deg, ${item.accent}cc, ${item.accent}88)`,
+                  }}
+                >
+                  {item.initials}
                 </div>
+
+                <div className="flex flex-col gap-0.5 min-w-0">
+                  <h3 className="font-bold text-sm text-[#1a1a1a] truncate">{item.name}</h3>
+                  <p className="text-xs text-[#1a1a1a]/45">{item.role}</p>
+                </div>
+
+                {/* Type badge */}
+                <span
+                  className="ml-auto text-[10px] font-bold tracking-[0.12em] uppercase px-2 py-1 rounded-full shrink-0"
+                  style={{
+                    background: `${item.accent}18`,
+                    color: item.accent,
+                    border: `1px solid ${item.accent}30`,
+                  }}
+                >
+                  {item.type}
+                </span>
+              </div>
+
+              {/* Divider */}
+              <div className="h-px bg-[#1a1a1a]/07" />
+
+              {/* Rating */}
+              <div className="flex items-center gap-2">
+                <StarRating rating={item.rating} />
+                <span className="text-xs font-bold text-[#1a1a1a]/40">
+                  {item.rating.toFixed(1)}
+                </span>
               </div>
 
               {/* Content */}
-              <p className="text-sm md:text-base text-gray-700 leading-relaxed">
-                {item.content}
+              <p className="text-sm text-[#1a1a1a]/60 leading-relaxed flex-1">
+                "{item.content}"
               </p>
+
+              {/* Bottom accent */}
+              <div
+                className="absolute bottom-0 left-6 right-6 h-[2px] rounded-full scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"
+                style={{ background: item.accent }}
+              />
             </div>
           ))}
         </div>
 
-        {/* Footer Button - Tulis Ulasan */}
-        <div className="mt-16 flex justify-center">
-          <button className="flex items-center gap-2 font-bold border-b-2 border-black pb-1 hover:text-[#e6a020] hover:border-[#e6a020] transition-all">
-            <MessageSquareText className="w-5 h-5 fill-black hover:fill-[#e6a020]" />
+        {/* Mobile CTA */}
+        <div className="mt-10 flex justify-center sm:hidden">
+          <button className="inline-flex items-center gap-2 text-sm font-semibold text-[#1a1a1a]/50 hover:text-[#e6a020] transition-colors">
+            <MessageSquareText className="w-4 h-4" />
             Tulis Ulasan Anda
           </button>
         </div>
+
       </div>
     </section>
   );

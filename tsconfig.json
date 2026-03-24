@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".", // <--- WAJIB ADA biar @/ jalan
     "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -19,7 +20,7 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"] // Ini udah bener kalau folder 'app' & 'components' ada di luar
     }
   },
   "include": [

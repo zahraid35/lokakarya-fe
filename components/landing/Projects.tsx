@@ -5,7 +5,7 @@ const projects = [
     id: 1,
     title: "Desain Grafis",
     tag: "Populer",
-    count: "340+ proyek",
+    count: "340+ portofolio",
     icon: <Palette className="w-5 h-5" />,
     span: "md:row-span-2",
     accent: "#e6a020",
@@ -13,21 +13,21 @@ const projects = [
   {
     id: 2,
     title: "Penulisan & Artikel",
-    count: "120+ proyek",
+    count: "120+ portofolio",
     icon: <PenLine className="w-5 h-5" />,
     accent: "#7c6df0",
   },
   {
     id: 3,
     title: "Pengisi Suara",
-    count: "80+ proyek",
+    count: "80+ portofolio",
     icon: <Mic2 className="w-5 h-5" />,
     accent: "#4ab3f4",
   },
   {
     id: 4,
     title: "Fotografi & Videografi",
-    count: "210+ proyek",
+    count: "210+ portofolio",
     icon: <Camera className="w-5 h-5" />,
     span: "md:col-span-2",
     accent: "#e6a020",
@@ -35,14 +35,14 @@ const projects = [
   {
     id: 5,
     title: "Iklan & Pemasaran",
-    count: "95+ proyek",
+    count: "95+ portofolio",
     icon: <Megaphone className="w-5 h-5" />,
     accent: "#f06090",
   },
   {
     id: 6,
     title: "Pengembangan Web & Aplikasi",
-    count: "280+ proyek",
+    count: "280+ portofolio",
     icon: <Code2 className="w-5 h-5" />,
     span: "md:col-span-2",
     accent: "#4ab3f4",
@@ -64,11 +64,11 @@ export default function Projects() {
             <div className="inline-flex items-center gap-2 mb-4">
               <span className="w-5 h-[1.5px] bg-[#e6a020]" />
               <span className="text-xs font-semibold tracking-[0.18em] uppercase text-[#e6a020]">
-                Proyek Terbuka
+                Kolaborasi Tersedia
               </span>
             </div>
             <h2 className="text-[clamp(1.5rem,3.5vw,2.25rem)] font-bold text-[#1a1a1a] tracking-tight leading-snug">
-              Pekerjaan Paling{" "}
+              Peluang Karya{" "}
               <span
                 style={{
                   background: "linear-gradient(90deg, #e6a020 0%, #c98a18 100%)",
@@ -77,7 +77,7 @@ export default function Projects() {
                   backgroundClip: "text",
                 }}
               >
-                Banyak Dicari
+                Terbanyak
               </span>
             </h2>
           </div>
@@ -86,7 +86,7 @@ export default function Projects() {
             href="#"
             className="hidden sm:inline-flex items-center gap-1.5 text-sm font-semibold text-[#1a1a1a]/50 hover:text-[#e6a020] transition-colors group"
           >
-            Lihat Semua
+            Lihat Semua Peluang
             <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
           </a>
         </div>

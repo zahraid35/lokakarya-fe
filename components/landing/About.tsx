@@ -4,23 +4,23 @@ const features = [
   {
     icon: <Briefcase className="w-5 h-5" />,
     label: "01",
-    title: "Informasi Lowongan Pekerjaan",
+    title: "Bangun Portofolio Nyata",
     description:
-      "Menyediakan informasi lowongan pekerjaan bagi individu yang ingin menemukan peluang kerja sesuai dengan keterampilan dan minat mereka.",
+      "Kreator mendapatkan kesempatan mengerjakan proyek dari bisnis asli untuk memperkuat portofolio profesional mereka.",
   },
   {
     icon: <Wrench className="w-5 h-5" />,
     label: "02",
-    title: "Layanan Jasa Profesional",
+    title: "Solusi Kreatif UMKM",
     description:
-      "Menyediakan berbagai layanan seperti pemasaran produk, desain grafis, hingga pengembangan website untuk mendukung kebutuhan bisnis digital.",
+      "UMKM mendapatkan dukungan desain, video, hingga pengembangan web untuk meningkatkan kualitas digital produk mereka.",
   },
   {
     icon: <Handshake className="w-5 h-5" />,
     label: "03",
-    title: "Kolaborasi Profesional",
+    title: "Progress Terstruktur",
     description:
-      "Menghubungkan klien dengan penyedia jasa kreatif dan profesional untuk mempermudah proses kerja sama dalam berbagai kebutuhan layanan digital.",
+      "Sistem lamaran (apply) dan laporan progress berkala memastikan kolaborasi berjalan transparan dari awal hingga akhir.",
   },
 ];
 
@@ -55,7 +55,7 @@ export default function About() {
             </div>
 
             <h2 className="text-[clamp(1.5rem,3.5vw,2.25rem)] font-bold text-[#1a1a1a] leading-[1.25] tracking-tight">
-              Platform Jasa Kreatif &{" "}
+              Ruang Kolaborasi untuk{" "}
               <span
                 style={{
                   background: "linear-gradient(90deg, #e6a020 0%, #d4911a 100%)",
@@ -64,9 +64,9 @@ export default function About() {
                   backgroundClip: "text",
                 }}
               >
-                Peluang Kerja
+                Tumbuh Bersama
               </span>{" "}
-              untuk UMKM & Masyarakat
+              lewat Karya Nyata
             </h2>
           </div>
 

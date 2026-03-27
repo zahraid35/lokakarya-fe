@@ -4,27 +4,27 @@ const testimonials = [
   {
     name: "Rd Airlangga Dewanata",
     role: "Pelaku UMKM",
-    type: "Klien",
+    type: "UMKM",
     rating: 5.0,
-    content: "LokaKarya benar-benar membantu bisnis saya. Saya menemukan desainer grafis yang tepat dalam hitungan hari, dan hasilnya melebihi ekspektasi.",
+    content: "LokaKarya sangat membantu bisnis saya. Saya mendapatkan logo berkualitas dari kreator berbakat, dan saya senang bisa membantu mereka membangun portofolio.",
     initials: "RA",
     accent: "#e6a020",
   },
   {
     name: "Siti Rahayu Pratiwi",
-    role: "Freelance Designer",
+    role: "Mahasiswa Desain",
     type: "Kreator",
     rating: 5.0,
-    content: "Sebagai kreator, platform ini memberi saya banyak peluang proyek yang sesuai skill. Prosesnya mudah dan kliennya profesional.",
+    content: "Dulu susah cari klien pertama. Di LokaKarya, saya bisa kerjakan proyek nyata dari UMKM dan portofolio saya sekarang jadi lebih profesional.",
     initials: "SR",
     accent: "#7c6df0",
   },
   {
     name: "Budi Santoso",
     role: "Pemilik Toko Online",
-    type: "Klien",
+    type: "UMKM",
     rating: 4.0,
-    content: "Fitur kolaborasi proyeknya sangat membantu. Komunikasi dengan freelancer jadi lebih terstruktur dan transparan.",
+    content: "Fitur laporan progresnya sangat bagus. Saya bisa pantau tiap tahap pengerjaan video produk saya dari awal sampai selesai.",
     initials: "BS",
     accent: "#4ab3f4",
   },
@@ -33,25 +33,25 @@ const testimonials = [
     role: "Content Writer",
     type: "Kreator",
     rating: 5.0,
-    content: "Saya sudah 3 bulan aktif di LokaKarya dan sudah menyelesaikan 12 proyek. Platform terbaik untuk freelancer kreatif Indonesia.",
+    content: "Bukan soal uang, tapi pengalaman mengerjakan proyek nyata itu yang mahal. LokaKarya adalah tempat terbaik untuk tumbuh bersama UMKM.",
     initials: "AM",
     accent: "#f06090",
   },
   {
     name: "Dimas Prasetyo",
     role: "Startup Founder",
-    type: "Klien",
+    type: "UMKM",
     rating: 5.0,
-    content: "Menemukan developer web yang solid itu susah, tapi di LokaKarya proses verifikasinya membuat saya lebih percaya diri memilih.",
+    content: "Platform ini menjembatani celah antara kebutuhan UMKM dan talenta muda. Proses apply-nya transparan dan terpercaya.",
     initials: "DP",
     accent: "#e6a020",
   },
   {
     name: "Nurul Hidayah",
-    role: "Fotografer Profesional",
+    role: "Fotografer Pemula",
     type: "Kreator",
     rating: 4.0,
-    content: "Platform yang sangat mendukung kreator lokal. Saya bisa menampilkan portofolio dan langsung terhubung dengan klien potensial.",
+    content: "Senang bisa membantu UMKM lokal sambil mempraktikkan ilmu fotografi saya. Portofolio saya semakin beragam berkat platform ini.",
     initials: "NH",
     accent: "#4ab3f4",
   },
@@ -171,7 +171,7 @@ export default function Testimonials() {
 
               {/* Content */}
               <p className="text-sm text-[#1a1a1a]/60 leading-relaxed flex-1">
-                "{item.content}"
+                &ldquo;{item.content}&rdquo;
               </p>
 
               {/* Bottom accent */}

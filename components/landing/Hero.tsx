@@ -25,7 +25,7 @@ const Hero = () => {
         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 mb-6 sm:mb-8">
           <span className="w-1.5 h-1.5 rounded-full bg-[#e6a020] animate-pulse" />
           <span className="text-[11px] sm:text-xs text-white/50 tracking-widest uppercase font-medium">
-            Platform Kolaborasi Digital
+            Membangun Portofolio & UMKM Lokal
           </span>
         </div>
 
@@ -34,7 +34,7 @@ const Hero = () => {
           className="text-[clamp(1.75rem,5vw,3.25rem)] font-semibold text-white leading-[1.15] mb-5 sm:mb-6 tracking-tight"
           style={{ letterSpacing: '-0.02em' }}
         >
-          Tempat UMKM dan Kreator{' '}
+          Kolaborasi Kreatif untuk{' '}
           <span
             style={{
               background: 'linear-gradient(90deg, #e6a020 0%, #f5c842 100%)',
@@ -43,21 +43,23 @@ const Hero = () => {
               backgroundClip: 'text',
             }}
           >
-            Berkolaborasi
+            Tumbuh Bersama
           </span>{' '}
-          Membangun Proyek Digital
+          UMKM Indonesia
         </h1>
 
         {/* Subtext */}
         <p className="text-sm sm:text-base text-white/40 max-w-[420px] mb-10 sm:mb-12 leading-relaxed">
-          Temukan freelancer terbaik atau proyek yang sesuai keahlianmu — semua dalam satu platform.
+          Platform di mana talenta bertemu dengan tantangan nyata — bantu UMKM berkembang dan bangun portofolio profesionalmu.
         </p>
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full max-w-[360px] sm:max-w-none">
-          <button className="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-white/5 text-white/80 rounded-2xl border border-white/[0.08] hover:bg-white/10 hover:border-white/20 hover:text-white transition-all duration-200 text-sm sm:text-base font-medium">
-            Daftar sebagai Freelancer
-          </button>
+          <Link href="/register" className="w-full sm:w-auto">
+            <button className="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-white/5 text-white/80 rounded-2xl border border-white/[0.08] hover:bg-white/10 hover:border-white/20 hover:text-white transition-all duration-200 text-sm sm:text-base font-medium">
+              Gabung sebagai Kreator
+            </button>
+          </Link>
 
           <Link href="/proyek" className="block w-full sm:w-auto">
             <button
@@ -67,7 +69,7 @@ const Hero = () => {
                 boxShadow: '0 4px 24px rgba(230, 160, 32, 0.25)',
               }}
             >
-              Temukan Proyek
+              Cari Peluang Kolaborasi
               <svg
                 className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-200"
                 fill="none"

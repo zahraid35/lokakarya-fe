@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Navbar from '@/components/landing/Navbar';
 import Footer from '@/components/landing/Footer';
-import { Search, ArrowUpRight, Sparkles } from 'lucide-react';
+import { Search, ArrowUpRight } from 'lucide-react';
 
 const CATEGORIES_DATA = [
   {

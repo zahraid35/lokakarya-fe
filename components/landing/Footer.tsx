@@ -90,7 +90,7 @@ export default function Footer() {
             </div>
 
             <p className="text-white/40 text-sm leading-relaxed">
-              Platform kolaborasi digital yang menghubungkan UMKM dengan kreator profesional untuk membangun proyek luar biasa.
+              Platform kolaborasi digital yang menghubungkan UMKM dengan kreator berbakat untuk membangun portofolio dan karya luar biasa.
             </p>
 
             {/* Socials */}

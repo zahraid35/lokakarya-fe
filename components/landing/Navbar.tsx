@@ -26,7 +26,7 @@ const Navbar = ({ theme = 'dark' }: NavbarProps) => {
 
   const navLinks = [
     { label: 'Cari Freelancer', href: '#' },
-    { label: 'Peluang Kerja', href: '/peluang-kerja' },
+    { label: 'Peluang Kolaborasi', href: '/peluang-kerja' },
   ];
 
   // ── Color tokens berdasarkan theme ──
@@ -122,7 +122,7 @@ const Navbar = ({ theme = 'dark' }: NavbarProps) => {
             {/* Desktop CTA */}
             <div className="hidden md:flex items-center gap-3">
               <Link
-                href="/daftar"
+                href="/register"
                 className="text-sm font-medium px-2 transition-colors"
                 style={{ color: daftarText }}
                 onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = linkHoverTx}
@@ -221,7 +221,7 @@ const Navbar = ({ theme = 'dark' }: NavbarProps) => {
 
         <div className="px-4 pb-8 flex flex-col gap-3 border-t border-white/[0.06] pt-4">
           <Link
-            href="/daftar"
+            href="/register"
             onClick={() => setIsOpen(false)}
             className="w-full py-3 text-center text-sm font-medium text-white/60 hover:text-white bg-white/[0.05] hover:bg-white/[0.09] rounded-xl transition-all"
           >
